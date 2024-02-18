@@ -51,3 +51,20 @@ window.addEventListener('scroll', function () {
     menu.classList.remove('menu-fixo');
   }
 });
+
+
+// Menu Mobile
+
+
+function AbrirMenu() {
+
+  const container = document.querySelector('#menu .box-menu');
+  const hamburger = document.querySelectorAll('#menu .menu-hamburger .hamburger');
+
+  container.classList.toggle('aberto');
+
+  hamburger.forEach(listra => {
+    listra.classList.toggle('girar');
+  })
+
+}
