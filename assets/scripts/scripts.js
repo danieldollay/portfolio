@@ -38,12 +38,19 @@ function proximaPalavra() {
 document.querySelector('#sobre-mim .habilidade').dataset.palavra = palavras[0];
 digitarPalavra(palavras[0], 0, 100);
 
-
-
 window.addEventListener('scroll', function () {
   var menu = document.getElementById('menu');
   var menuAltura = menu.offsetHeight;
   var posicaoScroll = window.scrollY;
+  const botao = document.querySelector('.btn-top');
+  const capturarScroll = document.body.scrollTop || document.documentElement.scrollTop;
+
+  if (capturarScroll > 20) {
+    botao.classList.add('topo');
+  } else {
+    botao.classList.remove('topo');
+  }
+
 
   if (posicaoScroll >= menuAltura) {
     menu.classList.add('menu-fixo');
@@ -54,17 +61,24 @@ window.addEventListener('scroll', function () {
 
 
 // Menu Mobile
-
-
 function AbrirMenu() {
 
   const container = document.querySelector('#menu .box-menu');
+  const body = document.querySelector('body');
   const hamburger = document.querySelectorAll('#menu .menu-hamburger .hamburger');
 
   container.classList.toggle('aberto');
+  body.classList.toggle('trava-scroll');
 
   hamburger.forEach(listra => {
     listra.classList.toggle('girar');
-  })
+  });
 
+}
+
+// Botão para rolar para o topo
+function ScrollTopo() {
+
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
