@@ -740,7 +740,11 @@ main>.btn-top svg {
 
 @media screen and (max-width: 1366px) {}
 
-@media screen and (max-width: 1280px) {}
+@media screen and (max-width: 1280px) {
+    #projetos .card {
+        width: 49%;
+    }
+}
 
 @media screen and (max-width: 1200px) {
     #menu ul li a {
@@ -844,7 +848,11 @@ main>.btn-top svg {
 
 @media screen and (max-width: 996px) {}
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    #projetos .card {
+        width: 100%;
+    }
+}
 
 @media screen and (max-width: 600px) {}
 
@@ -869,6 +877,16 @@ main>.btn-top svg {
     #sobre-mim .esq .experiencias {
         font-size: 18px;
         margin-bottom: 40px;
+    }
+    #projetos .card .front .nome {
+        font-size: 18px;
+    }
+    #projetos .card .front .bottom .data-desenvolvimento {
+        font-size: 16px;
+    }
+    #projetos .card .front .bottom {
+        height: auto;
+        row-gap: 16px;
     }
 }
 
