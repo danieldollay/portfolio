@@ -715,8 +715,8 @@ main>.btn-top svg {
 }
 
 #projetos .card .front .bottom .data-desenvolvimento {
-    color: #000;
-    font-size: 20px;
+    color: #fff;
+    font-size: 16px;
 }
 
 #projetos .area-cards {
@@ -726,6 +726,7 @@ main>.btn-top svg {
     row-gap: 25px;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 65px;
 }
 
 
@@ -887,6 +888,14 @@ main>.btn-top svg {
     #projetos .card .front .bottom {
         height: auto;
         row-gap: 16px;
+    }
+
+    #projetos .content>.titulo {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+    #projetos .area-cards {
+        margin-bottom: 40px;
     }
 }
 
