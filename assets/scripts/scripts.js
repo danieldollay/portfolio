@@ -76,6 +76,21 @@ function AbrirMenu() {
 
 }
 
+const links = document.querySelectorAll("#menu ul li a");
+links.forEach(function(link) {
+    link.addEventListener("click", function() {
+        const container = document.querySelector('#menu .box-menu');
+        container.classList.remove('aberto');
+        const body = document.querySelector('body');
+        body.classList.remove('trava-scroll');
+        const hamburgers = document.querySelectorAll('#menu .menu-hamburger .hamburger');
+        hamburgers.forEach(hamburger => {
+            hamburger.classList.remove('girar');
+        });
+    });
+});
+
+
 // Botão para rolar para o topo
 function ScrollTopo() {
 

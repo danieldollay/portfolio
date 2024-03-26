@@ -160,7 +160,7 @@ main {
 
 main>.btn-top {
     position: fixed;
-    bottom: 30px;
+    bottom: 100px;
     right: 5%;
     width: 60px;
     height: 60px;
@@ -490,6 +490,7 @@ main>.btn-top svg {
     text-decoration: none;
     transition: 0.2s all ease-in-out;
     border: 2px solid #3f8efb;
+
 }
 
 #sobre-mim .esq .btn-curriculo:hover {
@@ -574,8 +575,6 @@ main>.btn-top svg {
 /* Projetos */
 
 #projetos {
-    margin-bottom: 100px;
-    padding-bottom: 100px;
     border-radius: 10px 0 10px 0;
     position: relative;
 }
@@ -729,6 +728,85 @@ main>.btn-top svg {
     margin-bottom: 65px;
 }
 
+/* Experiência Profissional */
+
+#experiencia {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+#experiencia .content {
+    width: 840px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+#experiencia .content .titulo {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: var(--oswald);
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+#experiencia .content .empresa-data {
+    color: #fff;
+    display: flex;
+    column-gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+#experiencia .content .cargo {
+    color: var(--azul);
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+#experiencia .content .empresa {
+    font-size: 32px;
+}
+
+#experiencia .content .data {
+    color: #a3a3a3;
+    font-size: 24px;
+}
+
+#experiencia .content ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    list-style: disc;
+    padding-left: 53px;
+}
+
+#experiencia .content ul li {
+    color: #fff;
+    line-height: 25px;
+
+}
+
+#experiencia .content ul li::marker {
+    color: var(--azul);
+}
+
+footer {
+    background-color: var(--azul);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    row-gap: 40px;
+}
+
+footer p {
+    color: #fff;
+}
+
 
 
 @media screen and (max-width: 1920px) {}
@@ -769,6 +847,12 @@ main>.btn-top svg {
 @media screen and (max-width: 1080px) {}
 
 @media screen and (max-width: 1024px) {
+
+        section {
+            scroll-margin-top: 150px;
+        }
+
+
     main {
         overflow: hidden;
     }
@@ -796,6 +880,11 @@ main>.btn-top svg {
         transition: 0.4s all ease-in-out;
     }
 
+    #menu .esq {
+        display: none;
+    }
+
+
     #menu .content {
         justify-content: space-between;
     }
@@ -809,17 +898,58 @@ main>.btn-top svg {
         top: 90px;
         transition: 0.4s all ease-in-out;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        padding-top: 40px;
+        row-gap: 30px;
+
+    }
+
+    #menu.menu-fixo .content .box-menu {
+        top: 70px;
     }
 
     #menu nav,
     #menu ul,
     #menu li {
         height: auto;
+        width: 100%;
+    }
+
+
+    #menu nav {
+        width: 90%;
+    }
+
+
+
+    #menu ul {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    #menu li {
+        text-align: center;
+        justify-content: center;
+    }
+
+    #menu ul li a {
+        font-size: 16px;
+        width: 100%;
+        border-radius: 5px;
+        border: 2px solid var(--azul);
+        padding: 20px;
+    }
+
+    #menu ul li a:hover:after {
+        display: none;
     }
 
     #menu .content .box-menu.aberto {
         right: 0;
+    }
+
+    #menu.menu-fixo .content .box-menu.aberto {
+        top: 70px;
     }
 
     #menu .menu-hamburger .hamburger-01.girar {
@@ -855,7 +985,11 @@ main>.btn-top svg {
     }
 }
 
-@media screen and (max-width: 600px) {}
+@media screen and (max-width: 600px) {
+    #experiencia .content ul {
+        padding-left: 30px;
+    }
+}
 
 @media screen and (max-width: 490px) {
     #sobre-mim .area-foto {
@@ -879,12 +1013,15 @@ main>.btn-top svg {
         font-size: 18px;
         margin-bottom: 40px;
     }
+
     #projetos .card .front .nome {
         font-size: 18px;
     }
+
     #projetos .card .front .bottom .data-desenvolvimento {
         font-size: 16px;
     }
+
     #projetos .card .front .bottom {
         height: auto;
         row-gap: 16px;
@@ -894,6 +1031,7 @@ main>.btn-top svg {
         font-size: 32px;
         margin-bottom: 40px;
     }
+
     #projetos .area-cards {
         margin-bottom: 40px;
     }
