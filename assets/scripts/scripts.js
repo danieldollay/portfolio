@@ -97,3 +97,15 @@ function ScrollTopo() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// Virar card
+
+function virarCard(button) {
+  var card = button.closest('.card').querySelector('.conteudo');
+  card.classList.toggle('virar');
+}
+
+function voltarCard(button) {
+  var card = button.closest('.card').querySelector('.conteudo');
+  card.classList.remove('virar');
+}
