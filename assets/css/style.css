@@ -771,6 +771,7 @@ main>.btn-top svg {
     backface-visibility: hidden;
     -webkit-transform-style: preserve-3d !important;
     transform-style: preserve-3d !important;
+    z-index: 1;
 }
 
 #projetos .back {
